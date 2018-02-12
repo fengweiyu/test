@@ -1,0 +1,85 @@
+---- cData Matches (106 in 6 files) ----
+DualLinkList.c (f:\test):	char cData;	
+DualLinkList.c (f:\test):				ptListInsertNode->cData=i_dwElement;
+DualLinkList.c (f:\test):			*o_dwElement=ptListNode->cData;
+DualLinkList.c (f:\test):			printf("%d ",ptListNode->cData);
+DualLinkList.c (f:\test):	char cData;
+DualLinkList.c (f:\test):				if(ptListSortNode->cData>ptListSortNode->ptNext->cData)//两两比较找出最大的放最后面
+DualLinkList.c (f:\test):					cData=ptListSortNode->cData;
+DualLinkList.c (f:\test):					ptListSortNode->cData=ptListSortNode->ptNext->cData;
+DualLinkList.c (f:\test):					ptListSortNode->ptNext->cData=cData;
+DualLinkList.c (f:\test):	char cData;
+DualLinkList.c (f:\test):				if(ptListNode->cData>ptListSortNode->ptNext->cData)//一比较多找出最小的放最前面
+DualLinkList.c (f:\test):					cData=ptListNode->cData;
+DualLinkList.c (f:\test):					ptListNode->cData=ptListSortNode->ptNext->cData;
+DualLinkList.c (f:\test):					ptListSortNode->ptNext->cData=cData;
+LinkList.c (f:\test):	char cData;
+LinkList.c (f:\test):			pInsertListNode->cData=i_dwElement;
+LinkList.c (f:\test):		*o_dwElement=ptDeleteListNode->cData;
+LinkList.c (f:\test):			printf("%d ",ptLinkListNode->cData);
+LinkQueue.c (f:\test):		ptQueueNode->cData=i_cElement;//最开始ptRear指向头结点
+LinkQueue.c (f:\test):		*i_pcElement=ptQueueNode->cData;
+LinkQueue.c (f:\test):		printf("%d",ptQueueNode->cData);
+LinkQueue.h (f:\test):	char cData;
+SequenceBiTree.c (f:\test):	//char cData;//NULL表示空元素也就是空结点
+SequenceBiTree.c (f:\test):	printf("待修改结点的原值为%d,请输入新值:",tElement.cData);
+SequenceBiTree.c (f:\test):	scanf("%d",&tElement.cData);
+SequenceBiTree.c (f:\test):	printf("结点%d的双亲为%d\r\n",tElement.cData,tOtherElement.cData);
+SequenceBiTree.c (f:\test):	printf("结点%d的左孩子为%d\r\n",tElement.cData,tOtherElement.cData);
+SequenceBiTree.c (f:\test):	printf("结点%d的右孩子为%d\r\n",tElement.cData,tOtherElement.cData);
+SequenceBiTree.c (f:\test):	printf("结点%d的左兄弟为%d\r\n",tElement.cData,tOtherElement.cData);
+SequenceBiTree.c (f:\test):	printf("结点%d的右兄弟为%d\r\n",tElement.cData,tOtherElement.cData);
+SequenceBiTree.c (f:\test):	scanf("%d,%d",&tElement.cData,&iLeftOrRight);
+SequenceBiTree.c (f:\test):		i_ptSeqBiTree[i].cData=NULL;//初始化，没有元素为null
+SequenceBiTree.c (f:\test):			i_ptSeqBiTree[i].cData=(char)iData;
+SequenceBiTree.c (f:\test):		if((i!=0)&&(i_ptSeqBiTree[i].cData!=NULL)&&(i_ptSeqBiTree[(i+1)/2-1].cData==NULL))
+SequenceBiTree.c (f:\test):	if(i_ptSeqBiTree[0].cData!=NULL)
+SequenceBiTree.c (f:\test):		if(i_ptSeqBiTree[i].cData!=NULL)
+SequenceBiTree.c (f:\test):	if((i_ptValue->cData!=NULL)&&(i_ptSeqBiTree[(i+1)/2-1].cData==NULL))// 给叶子赋非空值但双亲为空
+SequenceBiTree.c (f:\test):	else if((i_ptValue->cData==NULL)&&((i_ptSeqBiTree[2*i+1].cData!=NULL)||(i_ptSeqBiTree[2*i+2].cData!=NULL)))// 给双亲赋空值但有叶子(不空)
+SequenceBiTree.c (f:\test):	tSeqBiTreeElement.cData=NULL;
+SequenceBiTree.c (f:\test):	if(i_ptSeqBiTree[0].cData==NULL)// 空树
+SequenceBiTree.c (f:\test):			if(i_ptSeqBiTree[i].cData==i_ptTreeElement->cData)// 找到
+SequenceBiTree.c (f:\test):	tSeqBiTreeElement.cData=NULL;
+SequenceBiTree.c (f:\test):	if(i_ptSeqBiTree[0].cData==NULL)// 空树
+SequenceBiTree.c (f:\test):			if(i_ptSeqBiTree[i].cData==i_ptTreeElement->cData)// 找到
+SequenceBiTree.c (f:\test):	tSeqBiTreeElement.cData=NULL;
+SequenceBiTree.c (f:\test):	if(i_ptSeqBiTree[0].cData==NULL)// 空树
+SequenceBiTree.c (f:\test):			if(i_ptSeqBiTree[i].cData==i_ptTreeElement->cData)// 找到
+SequenceBiTree.c (f:\test):	tSeqBiTreeElement.cData=NULL;
+SequenceBiTree.c (f:\test):	if(i_ptSeqBiTree[0].cData==NULL)// 空树
+SequenceBiTree.c (f:\test):			if((i_ptSeqBiTree[i].cData==i_ptTreeElement->cData)&&(i%2==0))
+SequenceBiTree.c (f:\test):	tSeqBiTreeElement.cData=NULL;
+SequenceBiTree.c (f:\test):	if(i_ptSeqBiTree[0].cData==NULL)// 空树
+SequenceBiTree.c (f:\test):			if((i_ptSeqBiTree[i].cData==i_ptTreeElement->cData)&&(i%2!=0))
+SequenceBiTree.c (f:\test):	if(i_ptSrcSeqBiTree[2*i_dwSrcPos+1].cData!=NULL)// 把q的j结点的左子树移为T的i结点的左子树
+SequenceBiTree.c (f:\test):	if(i_ptSrcSeqBiTree[2*i_dwSrcPos+2].cData!=NULL)// 把q的j结点的右子树移为T的i结点的右子树
+SequenceBiTree.c (f:\test):	i_ptSrcSeqBiTree[i_dwSrcPos].cData=NULL;
+SequenceBiTree.c (f:\test):	if(i_ptSeqBiTree[i_dwInsertChildPos].cData!=NULL)
+SequenceBiTree.c (f:\test):	if(i_ptSeqBiTree[i].cData==NULL)// 此结点空
+SequenceBiTree.c (f:\test):			if(i_ptSeqBiTree[2*i+1].cData!=NULL)
+SequenceBiTree.c (f:\test):			if(i_ptSeqBiTree[2*i+2].cData!=NULL)
+SequenceBiTree.c (f:\test):			i_ptSeqBiTree[i].cData=NULL;
+SequenceBiTree.c (f:\test):	printf("%d ",i_ptSeqBiTree[i_dwPos].cData);
+SequenceBiTree.c (f:\test):	if(i_ptSeqBiTree[i_dwPos*2+1].cData!=NULL)// 左子树不空
+SequenceBiTree.c (f:\test):	if(i_ptSeqBiTree[i_dwPos*2+2].cData!=NULL)// 右子树不空
+SequenceBiTree.c (f:\test):	if(i_ptSeqBiTree[i_dwPos*2+1].cData!=NULL)// 左子树不空
+SequenceBiTree.c (f:\test):	printf("%d ",i_ptSeqBiTree[i_dwPos].cData);
+SequenceBiTree.c (f:\test):	if(i_ptSeqBiTree[i_dwPos*2+2].cData!=NULL)// 右子树不空
+SequenceBiTree.c (f:\test):	if(i_ptSeqBiTree[i_dwPos*2+1].cData!=NULL)// 左子树不空
+SequenceBiTree.c (f:\test):	if(i_ptSeqBiTree[i_dwPos*2+2].cData!=NULL)// 右子树不空
+SequenceBiTree.c (f:\test):	printf("%d ",i_ptSeqBiTree[i_dwPos].cData);
+SequenceBiTree.c (f:\test):	while(i_ptSeqBiTree[i].cData==NULL)
+SequenceBiTree.c (f:\test):		if(NULL==i_ptSeqBiTree[j].cData)
+SequenceBiTree.c (f:\test):			printf("%d ",i_ptSeqBiTree[j].cData);// 只遍历非空的结点
+SequenceBiTree.c (f:\test):			if(NULL==tSeqBiTreeElement.cData)
+SequenceBiTree.c (f:\test):				printf("%d:%d ",j,tSeqBiTreeElement.cData);
+SequenceQueue.c (f:\test):	char cData;
+SequenceQueue.c (f:\test):	tElementData.cData=1;
+SequenceQueue.c (f:\test):	tElementData.cData=2;
+SequenceQueue.c (f:\test):	tElementData.cData=5;
+SequenceQueue.c (f:\test):	tElementData.cData=6;
+SequenceQueue.c (f:\test):	printf("退出队列元素:%d\r\n",tElementData.cData);
+SequenceQueue.c (f:\test):	printf("退出队列元素:%d\r\n",tElementData.cData);
+SequenceQueue.c (f:\test):	printf("退出队列元素:%d\r\n",tElementData.cData);
+SequenceQueue.c (f:\test):		printf("%d ",i_ptSeqQueue->ptBase[i].cData);

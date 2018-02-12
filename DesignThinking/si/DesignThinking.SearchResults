@@ -1,0 +1,126 @@
+---- ptThis Matches (129 in 24 files) ----
+AdapterPattern.c (designpatterns\structuraldesignpatterns\adapterpattern):void Cry(void *i_ptThis)
+AddRequirementCommand.c (designpatterns\behavioraldesignpatterns\commandpattern):void AddRequirementCommandExecute(T_Command *i_ptThis)
+AddRequirementCommand.c (designpatterns\behavioraldesignpatterns\commandpattern):	i_ptThis->tRequirementGroup.Find();
+AddRequirementCommand.c (designpatterns\behavioraldesignpatterns\commandpattern):	i_ptThis->tRequirementGroup.Add();
+AddRequirementCommand.c (designpatterns\behavioraldesignpatterns\commandpattern):	i_ptThis->tRequirementGroup.Plan();
+BridgePattern.c (designpatterns\structuraldesignpatterns\bridgepattern):void MakeMoney(T_Corp *i_ptThis)
+BridgePattern.c (designpatterns\structuraldesignpatterns\bridgepattern):	i_ptThis->tProduct.BeProducted();
+BridgePattern.c (designpatterns\structuraldesignpatterns\bridgepattern):	i_ptThis->tProduct.BeSelled();
+BridgePattern.h (designpatterns\structuraldesignpatterns\bridgepattern):	void (*MakeMoney)(struct Corp *ptThis);//抽象出公司的职责 赚钱
+BridgePattern.h (designpatterns\structuraldesignpatterns\bridgepattern):	void (*MakeMoney)(struct HouseCorp *ptThis);
+BridgePattern.h (designpatterns\structuraldesignpatterns\bridgepattern):	void (*MakeMoney)(struct ShanzhaiCorp *ptThis);
+BridgePattern.h (designpatterns\structuraldesignpatterns\bridgepattern):void MakeMoney(T_Corp *i_ptThis);
+BridgePattern.h (designpatterns\structuraldesignpatterns\bridgepattern):void ShanzhaiCorpMakeMoney(T_ShanzhaiCorp *i_ptThis);
+BridgePattern.h (designpatterns\structuraldesignpatterns\bridgepattern):void HouseCorpMakeMoney(T_HouseCorp *i_ptThis);
+ClosingState.c (designpatterns\behavioraldesignpatterns\statepattern):void ClosingStateOpen(T_State *ptThis)
+ClosingState.c (designpatterns\behavioraldesignpatterns\statepattern):	ptThis->tFatherState.GetContext().SetState(ptThis->tFatherState.GetContext().GetOpenningState(),ptThis->tFatherState.GetContext());//切换状态
+ClosingState.c (designpatterns\behavioraldesignpatterns\statepattern):	ptThis->tFatherState.GetContext().Open();//执行，逻辑上过度 到下一态
+ClosingState.c (designpatterns\behavioraldesignpatterns\statepattern):void ClosingStateClose(T_State *ptThis)
+ClosingState.c (designpatterns\behavioraldesignpatterns\statepattern):void ClosingStateRun(T_State *ptThis)
+ClosingState.c (designpatterns\behavioraldesignpatterns\statepattern):	ptThis->tFatherState.GetContext().SetState(ptThis->tFatherState.GetContext().GetRunningState(),ptThis->tFatherState.GetContext());//切换状态
+ClosingState.c (designpatterns\behavioraldesignpatterns\statepattern):	ptThis->tFatherState.GetContext().Run();//执行，逻辑上过度 到下一态
+ClosingState.c (designpatterns\behavioraldesignpatterns\statepattern):void ClosingStateStop(T_State *ptThis)
+ClosingState.c (designpatterns\behavioraldesignpatterns\statepattern):	ptThis->tFatherState.GetContext().SetState(ptThis->tFatherState.GetContext().GetStoppingState(),ptThis->tFatherState.GetContext());//切换状态
+ClosingState.c (designpatterns\behavioraldesignpatterns\statepattern):	ptThis->tFatherState.GetContext().Stop();//执行，逻辑上过度 到下一态
+CommandPattern.h (designpatterns\behavioraldesignpatterns\commandpattern):	void (*Execute)(struct Command *i_ptThis);
+CommandPattern.h (designpatterns\behavioraldesignpatterns\commandpattern):void AddRequirementCommandExecute(T_Command *i_ptThis);
+CommandPattern.h (designpatterns\behavioraldesignpatterns\commandpattern):void DeletePageCommandExecute(T_Command *i_ptThis);
+CommonEmployee.c (designpatterns\behavioraldesignpatterns\visitorpattern):void CommonEmployeeAccept(T_Employee *ptThis,T_Visitor i_tAcceptVisitor)
+CommonEmployee.c (designpatterns\behavioraldesignpatterns\visitorpattern):	i_tAcceptVisitor.CommonEmployeeVisit((T_CommonEmployee *)ptThis);
+DecoratorPattern.c (designpatterns\structuraldesignpatterns\decoratorpattern):void SchoolReportReport(void *i_ptThis)
+DecoratorPattern.c (designpatterns\structuraldesignpatterns\decoratorpattern):void SchoolReportSign(void *i_ptThis,char *i_strName)
+DecoratorPattern.h (designpatterns\structuraldesignpatterns\decoratorpattern):	void (*Report)(void *i_ptThis);//为保持统一,加入i_ptThis,内部可不使用,
+DecoratorPattern.h (designpatterns\structuraldesignpatterns\decoratorpattern):	void (*Sign)(void *i_ptThis,char *i_strName);//如果使用单例,可以去掉i_ptThis
+DecoratorPattern.h (designpatterns\structuraldesignpatterns\decoratorpattern):}T_SchoolReport;//由于i_ptThis是T_Decorator 使用,内部使用是要转换为T_Decorator *,也可以把上诉的void *改为struct Decorator*
+DecoratorPattern.h (designpatterns\structuraldesignpatterns\decoratorpattern):void SchoolReportReport(void *i_ptThis);
+DecoratorPattern.h (designpatterns\structuraldesignpatterns\decoratorpattern):void SchoolReportSign(void *i_ptThis,char *i_strName);
+DecoratorPattern.h (designpatterns\structuraldesignpatterns\decoratorpattern):void HighScoreDecoratorReport(void *i_ptThis);
+DecoratorPattern.h (designpatterns\structuraldesignpatterns\decoratorpattern):void HighScoreDecoratorSign(void *i_ptThis,char *i_strName);
+DecoratorPattern.h (designpatterns\structuraldesignpatterns\decoratorpattern):void SortDecoratorReport(void *i_ptThis);
+DecoratorPattern.h (designpatterns\structuraldesignpatterns\decoratorpattern):void SortDecoratorSign(void *i_ptThis,char *i_strName);
+DeletePageCommand.c (designpatterns\behavioraldesignpatterns\commandpattern):void DeletePageCommandExecute(T_Command *i_ptThis)
+DeletePageCommand.c (designpatterns\behavioraldesignpatterns\commandpattern):	i_ptThis->tPageGroup.Find();
+DeletePageCommand.c (designpatterns\behavioraldesignpatterns\commandpattern):	i_ptThis->tPageGroup.Delete();
+DeletePageCommand.c (designpatterns\behavioraldesignpatterns\commandpattern):	i_ptThis->tPageGroup.Plan();
+Employee.c (designpatterns\behavioraldesignpatterns\visitorpattern):char * EmployeeGetName(T_Employee *ptThis)
+Employee.c (designpatterns\behavioraldesignpatterns\visitorpattern):	return ptThis->strName;
+Employee.c (designpatterns\behavioraldesignpatterns\visitorpattern):void EmployeeSetName(T_Employee *ptThis,char *i_strName)
+Employee.c (designpatterns\behavioraldesignpatterns\visitorpattern):	ptThis->strName=i_strName;
+Employee.c (designpatterns\behavioraldesignpatterns\visitorpattern):int EmployeeGetSalary(T_Employee *ptThis)
+Employee.c (designpatterns\behavioraldesignpatterns\visitorpattern):	return ptThis->iSalary;
+Employee.c (designpatterns\behavioraldesignpatterns\visitorpattern):void EmployeeSetSalary(T_Employee *ptThis,int i_iSalary)
+Employee.c (designpatterns\behavioraldesignpatterns\visitorpattern):	ptThis->iSalary=i_iSalary;
+HighScoreDecorator.c (designpatterns\structuraldesignpatterns\decoratorpattern):void HighScoreDecoratorReport(void *i_ptThis)
+HighScoreDecorator.c (designpatterns\structuraldesignpatterns\decoratorpattern):	T_Decorator *ptHighScoreDecorator=(T_Decorator *)i_ptThis;
+HighScoreDecorator.c (designpatterns\structuraldesignpatterns\decoratorpattern):void HighScoreDecoratorSign(void *i_ptThis,char *i_strName)
+HighScoreDecorator.c (designpatterns\structuraldesignpatterns\decoratorpattern):	T_Decorator *ptHighScoreDecorator=(T_Decorator *)i_ptThis;
+HouseCorp.c (designpatterns\structuraldesignpatterns\bridgepattern):void HouseCorpMakeMoney(T_HouseCorp *i_ptThis)
+HouseCorp.c (designpatterns\structuraldesignpatterns\bridgepattern):	i_ptThis->tFatherCorp.MakeMoney(&i_ptThis->tFatherCorp);
+Manager.c (designpatterns\behavioraldesignpatterns\visitorpattern):void ManagerAccept(T_Employee *ptThis,T_Visitor i_tAcceptVisitor)
+Manager.c (designpatterns\behavioraldesignpatterns\visitorpattern):	i_tAcceptVisitor.ManagerVisit((T_Manager *)ptThis);
+OpenningState.c (designpatterns\behavioraldesignpatterns\statepattern):void OpenningStateOpen(T_State *ptThis)
+OpenningState.c (designpatterns\behavioraldesignpatterns\statepattern):void OpenningStateClose(T_State *ptThis)
+OpenningState.c (designpatterns\behavioraldesignpatterns\statepattern):	ptThis->tFatherState.GetContext().SetState(ptThis->tFatherState.GetContext().GetClosingState(),ptThis->tFatherState.GetContext());//切换状态
+OpenningState.c (designpatterns\behavioraldesignpatterns\statepattern):	ptThis->tFatherState.GetContext().Close();//执行，逻辑上过度 到下一态
+OpenningState.c (designpatterns\behavioraldesignpatterns\statepattern):void OpenningStateRun(T_State *ptThis)
+OpenningState.c (designpatterns\behavioraldesignpatterns\statepattern):void OpenningStateStop(T_State *ptThis)
+ResponsibilityChainPattern.c (designpatterns\behavioraldesignpatterns\responsibilitychainpattern):void HandleMessage(T_Woman *i_ptWoman,T_Handle *i_ptThis)
+ResponsibilityChainPattern.c (designpatterns\behavioraldesignpatterns\responsibilitychainpattern):	if(i_ptThis->GetLevel()==i_ptWoman->GetType())
+ResponsibilityChainPattern.c (designpatterns\behavioraldesignpatterns\responsibilitychainpattern):		i_ptThis->Handle(i_ptWoman);//调用子类的处理
+ResponsibilityChainPattern.c (designpatterns\behavioraldesignpatterns\responsibilitychainpattern):		if(i_ptThis->GetNextHandle()!=NULL)
+ResponsibilityChainPattern.c (designpatterns\behavioraldesignpatterns\responsibilitychainpattern):			i_ptThis->GetNextHandle()->tFatherHandle.HandleMessage(i_ptWoman,i_ptThis->GetNextHandle());
+ResponsibilityChainPattern.h (designpatterns\behavioraldesignpatterns\responsibilitychainpattern):	void (*HandleMessage)(T_Woman *i_ptWoman,struct Handle *i_ptThis);//struct Handle *i_ptThis用于调用子类的方法
+ResponsibilityChainPattern.h (designpatterns\behavioraldesignpatterns\responsibilitychainpattern):void HandleMessage(T_Woman *i_ptWoman,T_Handle *i_ptThis);
+RunningState.c (designpatterns\behavioraldesignpatterns\statepattern):void RunningStateOpen(T_State *ptThis)
+RunningState.c (designpatterns\behavioraldesignpatterns\statepattern):void RunningStateClose(T_State *ptThis)
+RunningState.c (designpatterns\behavioraldesignpatterns\statepattern):void RunningStateRun(T_State *ptThis)
+RunningState.c (designpatterns\behavioraldesignpatterns\statepattern):void RunningStateStop(T_State *ptThis)
+RunningState.c (designpatterns\behavioraldesignpatterns\statepattern):	ptThis->tFatherState.GetContext().SetState(ptThis->tFatherState.GetContext().GetStoppingState(),ptThis->tFatherState.GetContext());//切换状态
+RunningState.c (designpatterns\behavioraldesignpatterns\statepattern):	ptThis->tFatherState.GetContext().Stop();//执行，逻辑上过度 到下一态
+ShaizhaiCorp.c (designpatterns\structuraldesignpatterns\bridgepattern):void ShanzhaiCorpMakeMoney(T_ShanzhaiCorp *i_ptThis)
+ShaizhaiCorp.c (designpatterns\structuraldesignpatterns\bridgepattern):	i_ptThis->tFatherCorp.MakeMoney(&i_ptThis->tFatherCorp);
+SortDecorator.c (designpatterns\structuraldesignpatterns\decoratorpattern):void SortDecoratorReport(void *i_ptThis)
+SortDecorator.c (designpatterns\structuraldesignpatterns\decoratorpattern):	T_Decorator *ptSortDecorator=(T_Decorator *)i_ptThis;
+SortDecorator.c (designpatterns\structuraldesignpatterns\decoratorpattern):void SortDecoratorSign(void *i_ptThis,char *i_strName)
+SortDecorator.c (designpatterns\structuraldesignpatterns\decoratorpattern):	T_Decorator *ptSortDecorator=(T_Decorator *)i_ptThis;
+StatePattern.h (designpatterns\behavioraldesignpatterns\statepattern):	void (*Open)(struct State *ptThis);//参数弱耦合
+StatePattern.h (designpatterns\behavioraldesignpatterns\statepattern):	void (*Close)(struct State *ptThis);
+StatePattern.h (designpatterns\behavioraldesignpatterns\statepattern):	void (*Run)(struct State *ptThis);
+StatePattern.h (designpatterns\behavioraldesignpatterns\statepattern):	void (*Stop)(struct State *ptThis);
+StatePattern.h (designpatterns\behavioraldesignpatterns\statepattern):void RunningStateOpen(T_State *ptThis);
+StatePattern.h (designpatterns\behavioraldesignpatterns\statepattern):void RunningStateClose(T_State *ptThis);
+StatePattern.h (designpatterns\behavioraldesignpatterns\statepattern):void RunningStateRun(T_State *ptThis);
+StatePattern.h (designpatterns\behavioraldesignpatterns\statepattern):void RunningStateStop(T_State *ptThis);
+StatePattern.h (designpatterns\behavioraldesignpatterns\statepattern):void StoppingStateOpen(T_State *ptThis);
+StatePattern.h (designpatterns\behavioraldesignpatterns\statepattern):void StoppingStateClose(T_State *ptThis);
+StatePattern.h (designpatterns\behavioraldesignpatterns\statepattern):void StoppingStateRun(T_State *ptThis);
+StatePattern.h (designpatterns\behavioraldesignpatterns\statepattern):void StoppingStateStop(T_State *ptThis);
+StatePattern.h (designpatterns\behavioraldesignpatterns\statepattern):void ClosingStateOpen(T_State *ptThis);
+StatePattern.h (designpatterns\behavioraldesignpatterns\statepattern):void ClosingStateClose(T_State *ptThis);
+StatePattern.h (designpatterns\behavioraldesignpatterns\statepattern):void ClosingStateRun(T_State *ptThis);
+StatePattern.h (designpatterns\behavioraldesignpatterns\statepattern):void ClosingStateStop(T_State *ptThis);
+StatePattern.h (designpatterns\behavioraldesignpatterns\statepattern):void OpenningStateOpen(T_State *ptThis);
+StatePattern.h (designpatterns\behavioraldesignpatterns\statepattern):void OpenningStateClose(T_State *ptThis);
+StatePattern.h (designpatterns\behavioraldesignpatterns\statepattern):void OpenningStateRun(T_State *ptThis);
+StatePattern.h (designpatterns\behavioraldesignpatterns\statepattern):void OpenningStateStop(T_State *ptThis);
+StoppingState.c (designpatterns\behavioraldesignpatterns\statepattern):void StoppingStateOpen(T_State *ptThis)
+StoppingState.c (designpatterns\behavioraldesignpatterns\statepattern):	ptThis->tFatherState.GetContext().SetState(ptThis->tFatherState.GetContext().GetOpenningState(),ptThis->tFatherState.GetContext());//?л???
+StoppingState.c (designpatterns\behavioraldesignpatterns\statepattern):	ptThis->tFatherState.GetContext().Open();//??У????????? ??????
+StoppingState.c (designpatterns\behavioraldesignpatterns\statepattern):void StoppingStateClose(T_State *ptThis)
+StoppingState.c (designpatterns\behavioraldesignpatterns\statepattern):void StoppingStateRun(T_State *ptThis)
+StoppingState.c (designpatterns\behavioraldesignpatterns\statepattern):	ptThis->tFatherState.GetContext().SetState(ptThis->tFatherState.GetContext().GetRunningState(),ptThis->tFatherState.GetContext());//?л???
+StoppingState.c (designpatterns\behavioraldesignpatterns\statepattern):	ptThis->tFatherState.GetContext().Run();//??У????????? ??????
+StoppingState.c (designpatterns\behavioraldesignpatterns\statepattern):void StoppingStateStop(T_State *ptThis)
+TemplateMethodPattern.h (designpatterns\behavioraldesignpatterns\templatemethodpattern):	void (*Run)(struct HummerModel *i_ptThis);//不允许覆写
+VisitorPattern.h (designpatterns\behavioraldesignpatterns\visitorpattern):	char  *(*GetName)(struct Employee *ptThis);//具体函数(本层实现)
+VisitorPattern.h (designpatterns\behavioraldesignpatterns\visitorpattern):	void (*SetName)(struct Employee *ptThis,char *i_strName);//具体函数(本层实现)
+VisitorPattern.h (designpatterns\behavioraldesignpatterns\visitorpattern):	int (*GetSalary)(struct Employee *ptThis);//具体函数(本层实现)
+VisitorPattern.h (designpatterns\behavioraldesignpatterns\visitorpattern):	void (*SetSalary)(struct Employee *ptThis,int i_iSalary);//具体函数(本层实现)
+VisitorPattern.h (designpatterns\behavioraldesignpatterns\visitorpattern):	void (*Accept)(struct Employee *ptThis,T_Visitor i_tAcceptVisitor);//抽象函数(下一层实现)
+VisitorPattern.h (designpatterns\behavioraldesignpatterns\visitorpattern):char * EmployeeGetName(T_Employee *ptThis);
+VisitorPattern.h (designpatterns\behavioraldesignpatterns\visitorpattern):void EmployeeSetName(T_Employee *ptThis,char *i_strName);
+VisitorPattern.h (designpatterns\behavioraldesignpatterns\visitorpattern):int EmployeeGetSalary(T_Employee *ptThis);
+VisitorPattern.h (designpatterns\behavioraldesignpatterns\visitorpattern):void EmployeeSetSalary(T_Employee *ptThis,int i_iSalary);
+VisitorPattern.h (designpatterns\behavioraldesignpatterns\visitorpattern):void ManagerAccept(T_Employee *ptThis,T_Visitor i_tAcceptVisitor);
+VisitorPattern.h (designpatterns\behavioraldesignpatterns\visitorpattern):void CommonEmployeeAccept(T_Employee *ptThis,T_Visitor i_tAcceptVisitor);
