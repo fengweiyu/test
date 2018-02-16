@@ -1,3 +1,14 @@
+/*****************************************************************************
+* Copyright (C) 2017-2018 Hanson Yu  All rights reserved.
+------------------------------------------------------------------------------
+* File Module		: 	ManyVirtual.cpp
+* Description		: 	ManyVirtual operation center
+* Created			: 	2017.09.11.
+* Author			: 	Yu Weifeng
+* Function List 	: 	
+* Last Modified 	: 	
+* History			: 	
+******************************************************************************/
 #ifndef MANY_VIRTUAL
 #define MANY_VIRTUAL
 

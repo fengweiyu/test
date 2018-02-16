@@ -1,3 +1,21 @@
+/*****************************************************************************
+* Copyright (C) 2017-2018 Hanson Yu  All rights reserved.
+------------------------------------------------------------------------------
+* File Module		: 	ManyVirtual.cpp
+* Description		: 	ManyVirtual operation center
+
+book@book-desktop:/work/project/test$ 
+book@book-desktop:/work/project/test$ g++ -o ManyVirtual ManyVirtual.cpp 
+book@book-desktop:/work/project/test$ ./ManyVirtual 
+this is virtual3
+
+
+* Created			: 	2017.09.11.
+* Author			: 	Yu Weifeng
+* Function List 	: 	
+* Last Modified 	: 	
+* History			: 	
+******************************************************************************/
 
 
 
@@ -56,12 +74,7 @@ void virtual3::print()
 
 }
 
-/*
-book@book-desktop:/work/project/test$ 
-book@book-desktop:/work/project/test$ g++ -o ManyVirtual ManyVirtual.cpp 
-book@book-desktop:/work/project/test$ ./ManyVirtual 
-this is virtual3
-*/
+
 int main(int argc,char **argv)
 {
 	virtual3 virtualObj;
