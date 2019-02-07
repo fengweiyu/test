@@ -1,13 +1,13 @@
 /*****************************************************************************
-* Copyright (C) 2017-2018 Hanson Yu  All rights reserved.
+* Copyright (C) 2017-2018 Hanson Yu All rights reserved.
 ------------------------------------------------------------------------------
-* File Module		: 	ManyVirtual.cpp
-* Description		: 	ManyVirtual operation center
-* Created			: 	2017.09.11.
-* Author			: 	Yu Weifeng
-* Function List 	: 	
-* Last Modified 	: 	
-* History			: 	
+* File Module	: ManyVirtual.cpp
+* Description	: ManyVirtual operation center
+* Created	: 2017.09.11.
+* Author	: Yu Weifeng
+* Function List : 
+* Last Modified : 
+* History	: 
 ******************************************************************************/
 #ifndef MANY_VIRTUAL
 #define MANY_VIRTUAL
@@ -18,26 +18,27 @@
 class virtual1
 {
 public:
-	virtual1();
-	~virtual1();
-	virtual void print();
-
+virtual1();
+~virtual1();
+virtual void print();
 
 };
 
 class virtual2 : virtual1
 {
 public:
-	virtual2();
-	~virtual2();
-	void print();
+virtual2();
+~virtual2();
+void print();
+void virtualprint();
 };
 
 class virtual3 : virtual2
 {
 public:
-	 virtual3();
-	~virtual3();
-	void print();
+virtual3();
+~virtual3();
+void print();
+void virtualprint();
 };
 #endif
